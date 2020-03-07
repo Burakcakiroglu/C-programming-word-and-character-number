@@ -1,10 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 #define size 100
-/*
-Name:Burak ÇAKIROÐLU/170315015/Formal Education
-Name:Enes TÜRKMEN/170315025/Formal Education
-*/
+
 int main()
 {
    char character[size]={0};
