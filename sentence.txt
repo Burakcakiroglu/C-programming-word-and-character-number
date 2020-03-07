@@ -1,0 +1,89 @@
+#include<stdio.h>
+#include<stdlib.h>
+#define size 100
+/*
+Name:Burak ÇAKIROÐLU/170315015/Formal Education
+Name:Enes TÜRKMEN/170315025/Formal Education
+*/
+int main()
+{
+   char character[size]={0};
+   int character_num=0,word_num=0;
+   unsigned int x;
+   int counter=0,character1=0,number=0,space=0,exit=0;
+   size_t k;
+   printf("%17c ============================================================================\n\n",32);
+   printf("%35c =======FULLY SENTENCE PROGRAM========\n\n\n",32);
+   printf("%10c Please enter a string:",32);
+   gets(character);
+
+   for(k=0;k<size;k++)
+    {
+      for(x=65;x<=90;x++)
+    {
+        if(character[k]==x || character[k]==x+32)
+        {
+            character[x]++;
+        }
+        else if(character[k]=='\0')
+        {
+            break;
+        }
+    }
+   }
+   for(x=65;x<=90;x++)
+   {
+       if(character[x]>number)
+       {
+           number=character[x];
+           character1=x;
+       }
+   }
+     for(k=0;k<size;k++)
+    {
+      if(character[k]==' ')
+        {
+            word_num++;
+            space++;
+        }
+        else if(character[k]=='\0')
+        {
+            break;
+        }
+
+       character_num++;
+   }
+    if(character1=='\0')
+    {
+        printf("\n\n%10c =>You entered the wrong character.\n\n",32);
+    }
+   else
+   {
+   printf("%10c => Character number=%d\n",32,character_num-space);
+   printf("%10c => Word number=%d\n",32,word_num+1);
+
+
+   for(x=65;x<=90;x++)
+   {
+       if(character[x]!=0)
+       {
+           counter++;
+       }
+       else
+       {
+           printf("%10c => Sentence hasn't all characters.\n",32);
+           break;
+       }
+   }
+   if(counter==26)
+   {
+       printf("%10c => Sentence has all characters.\n",32);
+
+   }
+
+        printf("%10c => Most used characters=%d(%c or %c)\n\n\n\n",32,number,character1,character1+32);
+   }
+}
+
+
+
